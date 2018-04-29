@@ -1,0 +1,11 @@
+function createCharacterMsg(){
+    var adj = ['an amusing','an angry','a boring','a brave','a careful','a careless','a charming','a clever','a confident','a crafty','a crazy','a creative','a cruel','a dependable','an easygoing','an energetic','a forgetful','a friendly','a good-looking','a graceful','a happy','a helpful','a horrible','a humble','a humorous','an inconsiderate','a likable','an old','an outgoing','a responsible','a romantic','a sad','a selfish','a talkative','a touchy','an unlucky','a young'];
+    var races = ['Aarakocra','Aasimar','Bugbear','Dragonborn','Dwarf','Elf','Tiefling','Firbolg','Genasi','Gnome','Goblin','Goliath','Half-Elf','Halfling','Half-Orc','Hobgoblin','Human','Kenku','Kobold','Lizardfolk','Orc','Tabaxi','Tiefling','Tortle','Triton'];
+    var classes = ['Barbarian','Bard','Cleric','Druid','Fighter','Monk','Paladin','Ranger','Rogue','Sorcerer','Warlock','Wizard'];
+    var extra = [' with a fear of skeletons',' with a fear of dungeons', ' with a fear of dragons',' with a limp',' who is on a quest to save the family farm', ' who is a veagan',' with has a duck as their best friend', ' who can\'t say no to a fight',' who will not ride an animal' ,'who will always answers questions with questions',
+      ' who prefers to sleep outside', ' who has a fear of heights',' who is color blind', ' with a mysterious orb', ' who is always hungry', ' who is always thirsty',' with short term memory problems',' with long term memory problems',' with a lisp', ' who is bad with names',' with chronic hicups', ' obsessed with creating songs about thier journey'
+      ,' who narrates what they\'re doing for everyone to hear', ' who talks about themself in the third person', ' who does not how to write', ' who always spells at least one word wrong', ' who is sensitive to people calling them short', ' who hates kids', ' who thinks their the smartest person in the room', ' who does\'t know when to be quite', ' who always hums', ' who has an accent that seems to consistently changes', ' who speaks broken common'];
+    var str = "Your next character will be " + adj[Math.floor(Math.random() * adj.length)]+ " "+ races[Math.floor(Math.random() * races.length)] +" "+classes[Math.floor(Math.random() *classes.length)] + extra[Math.floor(Math.random()*extra.length)];
+
+    document.getElementById('character-text').innerHTML = str;
+}
